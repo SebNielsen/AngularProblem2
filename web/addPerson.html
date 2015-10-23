@@ -1,0 +1,24 @@
+<div class="col-md-6" style="border: thin lightblue solid; border-radius: 5px;padding: 1em;" ng-controller="PersonController as personCtrl">
+    <h2>Add Person</h2>
+    <hr/>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="name">Name:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="name" ng-model="newPerson.name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="age">Age:</label>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="age" ng-model="newPerson.age" required>
+            </div>
+        </div>
+        <div>
+             <br/>
+             <input type="hidden" ng-model="newPerson.id"/>
+             <button><a href="#/" ng-click="personCtrl.add(newPerson)">Add</a></button>
+        </div>
+    </form>
+</div>
+

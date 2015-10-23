@@ -1,0 +1,21 @@
+<div class="container" ng-controller="PersonController as personCtrl">
+    <h2>Person List</h2>
+    <div class="row, col-sm-12">
+        <div class="col-sm-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="person in personCtrl.persons">
+                        <td>{{person.name}}</td>
+                        <td><a href="#/detail/{{person.id}}">{{person.id}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
